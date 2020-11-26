@@ -14,7 +14,6 @@ export default function App() {
     { name: 'study', desc: 'career bana le', key: '4', done: false },
     { name: 'dinner', desc: 'firse mota ho', key: '5', done: false }
   ]);
-
   const pressHandler = (key) => {
     SetList((prevTodos) => {
       return prevTodos.filter(SetList => SetList.key != key)
@@ -22,6 +21,7 @@ export default function App() {
   }
 
   const submitHandler = (text) => {
+
     SetList((prevTodos) => {
       if (text.length > 0) {
         return [
@@ -29,6 +29,7 @@ export default function App() {
           ...prevTodos
         ]
       }
+
       else {
         return [...prevTodos]
       }
@@ -36,7 +37,7 @@ export default function App() {
   }
 
   return (
-    < View style={styles.container}>
+    < View style={styles.container} >
       <LinearGradient colors={['#2d3337', '#24282c', '#1b1e21', '#121416', '#090a0b']} style={styles.linearGradient}>
         <Header submitHandler={submitHandler} list={list} />
         <Text style={{ color: 'white', fontSize: 20 }}>{list.length} Pending Tasks</Text>
