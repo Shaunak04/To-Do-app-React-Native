@@ -1,0 +1,18 @@
+{
+  "name": "ToDoApp",
+  "displayName": "ToDoApp",
+  "expo": {
+    "name": "ToDoApp",
+    "slug": "ToDoApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "icon": "assets/icon.png",
+    "splash": {
+      "image": "assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#121416"
+    }
+  }
+}
