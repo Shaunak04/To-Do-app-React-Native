@@ -1,2 +1,2 @@
 # To-Do-app-React-Native
-Cross platform native application built in React Native with straightforward UI
+Cross platform application built with React Native framework with straightforward UI
