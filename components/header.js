@@ -4,22 +4,31 @@ import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Input } from 'react-native-elements';
 
 export default function Header({ submitHandler, list }) {
-
-    const [colored, setColor] = useState('red');
-    const [text, setText] = useState('')
+    const [text, setText] = useState('');
     const changeHandler = (val) => {
         setText(val);
     }
+    var red = 'red';
+    var green = 'green';
+    function colorHandler() {
+        if (list.length == 0) {
+            return green;
+        }
+        else {
+            return red;
+        }
+    }
     return (
         <View style={{
+            borderBottomColor: colorHandler(),
             borderBottomWidth: 3,
-            borderBottomColor: { colored },
             width: "100%",
             marginBottom: 10,
         }}>
             <Text style={styles.intro}>To Do List</Text>
             <View style={styles.input}>
                 <Input
+                    clearButtonMode="always"
                     onChangeText={changeHandler}
                     inputContainerStyle={styles.hold}
                     inputStyle={styles.container}
